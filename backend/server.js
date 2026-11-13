@@ -107,7 +107,12 @@ async function startServer() {
     process.on('SIGINT', () => shutdown('SIGINT'));
     process.on('SIGTERM', () => shutdown('SIGTERM'));
   } catch (error) {
-    console.error('Failed to start HR backend:', error.message);
+    startServer().catch((error) => {
+  console.error('Failed to start HR backend:');
+  console.error(error);
+  console.error(error?.stack);
+  process.exit(1);
+});
     process.exit(1);
   }
 }
