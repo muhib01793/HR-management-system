@@ -1,0 +1,15 @@
+{
+  "name": "hr-management-system",
+  "version": "2.2.0",
+  "private": true,
+  "description": "HR Management System (React + Express + PostgreSQL)",
+  "scripts": {
+    "setup": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "test": "npm --prefix backend test && npm --prefix frontend test"
+  },
+  "engines": { "node": ">=18" }
+}

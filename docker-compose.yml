@@ -1,0 +1,47 @@
+# Production-style setup: PostgreSQL + the HR app on one port.
+#   1. cp .env.example .env   (then fill in the values)
+#   2. docker compose up -d --build
+#   3. open http://localhost:5000
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: hr_management
+      POSTGRES_USER: hr
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hr -d hr_management"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: hr_management
+      DB_USER: hr
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      ALLOW_REGISTRATION: ${ALLOW_REGISTRATION:-true}
+      COMPANY_NAME: ${COMPANY_NAME:-My Company}
+      ADMIN_NAME: ${ADMIN_NAME:-Admin}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      SEED_DEMO_DATA: ${SEED_DEMO_DATA:-false}
+      TRUST_PROXY: ${TRUST_PROXY:-0}
+    ports:
+      - "${APP_PORT:-5000}:5000"
+
+volumes:
+  pgdata:

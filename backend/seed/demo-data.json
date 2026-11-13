@@ -1,0 +1,171 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "Consulting",
+      "description": "Business and management consulting services"
+    },
+    {
+      "id": 2,
+      "name": "Human Resources",
+      "description": "Recruitment, payroll and employee relations"
+    },
+    {
+      "id": 3,
+      "name": "Marketing",
+      "description": "Branding, content and digital marketing"
+    },
+    {
+      "id": 4,
+      "name": "Technology",
+      "description": "Software development and IT infrastructure"
+    },
+    {
+      "id": 5,
+      "name": "Finance",
+      "description": "Accounting, budgeting and financial reporting"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Ahmed Raza",
+      "email": "ahmed.raza@consultancyoutfit.com",
+      "phone": "+92 300 1234567",
+      "department": "Consulting",
+      "designation": "Chief Consultant",
+      "salary": 450000,
+      "joinDate": "2019-03-11",
+      "status": "active"
+    },
+    {
+      "name": "Fatima Khan",
+      "email": "fatima.khan@consultancyoutfit.com",
+      "phone": "+92 301 2345678",
+      "department": "Human Resources",
+      "designation": "HR Manager",
+      "salary": 350000,
+      "joinDate": "2020-06-15",
+      "status": "active"
+    },
+    {
+      "name": "Ali Hassan",
+      "email": "ali.hassan@consultancyoutfit.com",
+      "phone": "+92 302 3456789",
+      "department": "Consulting",
+      "designation": "Senior Consultant",
+      "salary": 380000,
+      "joinDate": "2021-01-10",
+      "status": "active"
+    },
+    {
+      "name": "Ayesha Malik",
+      "email": "ayesha.malik@consultancyoutfit.com",
+      "phone": "+92 303 4567890",
+      "department": "Marketing",
+      "designation": "Marketing Lead",
+      "salary": 300000,
+      "joinDate": "2022-04-05",
+      "status": "active"
+    },
+    {
+      "name": "Usman Tariq",
+      "email": "usman.tariq@consultancyoutfit.com",
+      "phone": "+92 304 5678901",
+      "department": "Technology",
+      "designation": "Software Engineer",
+      "salary": 320000,
+      "joinDate": "2022-08-22",
+      "status": "active"
+    },
+    {
+      "name": "Zainab Sheikh",
+      "email": "zainab.sheikh@consultancyoutfit.com",
+      "phone": "+92 305 6789012",
+      "department": "Finance",
+      "designation": "Finance Officer",
+      "salary": 280000,
+      "joinDate": "2023-02-13",
+      "status": "active"
+    },
+    {
+      "name": "Bilal Ahmed",
+      "email": "bilal.ahmed@consultancyoutfit.com",
+      "phone": "+92 306 7890123",
+      "department": "Consulting",
+      "designation": "Business Analyst",
+      "salary": 260000,
+      "joinDate": "2023-07-03",
+      "status": "active"
+    },
+    {
+      "name": "Hira Shahid",
+      "email": "hira.shahid@consultancyoutfit.com",
+      "phone": "+92 307 8901234",
+      "department": "Marketing",
+      "designation": "Content Writer",
+      "salary": 180000,
+      "joinDate": "2024-01-15",
+      "status": "active"
+    },
+    {
+      "name": "Danish Ali",
+      "email": "danish.ali@consultancyoutfit.com",
+      "phone": "+92 308 9012345",
+      "department": "Technology",
+      "designation": "DevOps Engineer",
+      "salary": 340000,
+      "joinDate": "2024-05-20",
+      "status": "active"
+    },
+    {
+      "name": "Sana Qureshi",
+      "email": "sana.qureshi@consultancyoutfit.com",
+      "phone": "+92 309 0123456",
+      "department": "Human Resources",
+      "designation": "Recruiter",
+      "salary": 200000,
+      "joinDate": "2024-09-02",
+      "status": "active"
+    },
+    {
+      "name": "Omar Farooq",
+      "email": "omar.farooq@consultancyoutfit.com",
+      "phone": "+92 311 1122334",
+      "department": "Finance",
+      "designation": "Junior Accountant",
+      "salary": 150000,
+      "joinDate": "2025-03-10",
+      "status": "inactive"
+    },
+    {
+      "name": "Mahnoor Aslam",
+      "email": "mahnoor.aslam@consultancyoutfit.com",
+      "phone": "+92 312 2233445",
+      "department": "Technology",
+      "designation": "UI/UX Designer",
+      "salary": 220000,
+      "joinDate": "2025-10-06",
+      "status": "active"
+    },
+    {
+      "name": "Hassan Javed",
+      "email": "hassan.javed@consultancyoutfit.com",
+      "phone": "+92 313 3344556",
+      "department": "Consulting",
+      "designation": "Trainee Consultant",
+      "salary": 120000,
+      "joinDate": "2026-10-20",
+      "status": "active"
+    },
+    {
+      "name": "Amna Yousaf",
+      "email": "amna.yousaf@consultancyoutfit.com",
+      "phone": "+92 314 4455667",
+      "department": "Marketing",
+      "designation": "Marketing Executive",
+      "salary": 160000,
+      "joinDate": "2026-11-02",
+      "status": "active"
+    }
+  ]
+}

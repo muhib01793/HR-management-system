@@ -1,0 +1,17 @@
+# dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# secrets and local config - NEVER commit these
+.env
+.env.*
+!.env.example
+
+# runtime / tooling
+*.log
+backups/
+playwright-report/
+test-results/
+.DS_Store
+Thumbs.db
