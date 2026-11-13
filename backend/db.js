@@ -6,8 +6,20 @@ const demo = require('./seed/demo-data.json');
 // DATE columns come back as plain "YYYY-MM-DD" strings (no timezone shifting).
 types.setTypeParser(1082, (value) => value);
 
-const pool = new Pool({ ...config.db, max: 10, idleTimeoutMillis: 30000 });
-
+const pool = new Pool(
+  process.env.DATABASE_URL
+    ? {
+        connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false },
+        max: 10,
+        idleTimeoutMillis: 30000
+      }
+    : {
+        ...config.db,
+        max: 10,
+        idleTimeoutMillis: 30000
+      }
+);
 pool.on('error', (err) => {
   console.error('Unexpected PostgreSQL error:', err.message);
 });
